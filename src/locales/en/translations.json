@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "welcome": "Welcome",
+    "description": "This is your description",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Let's Learn More",
+    "subtitle": "About Me",
+    "description": ""
+  },
+  "header": {
+    "greeting": "Hello, I am Shakar. Welcome to my profile👋🏻.",
+    "webDeveloper": "Web developer",
+    "uiuxDesigner": "UI UX Designer"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experiences": {
+    "title": "Work Experiences"
+  },
+  "certifications": {
+    "title": "Certifications"
+  },
+  "works": {
+    "header": "Here you can see my projects👇🏻",
+    "filters": {
+      "All": "All",
+      "Web-App": "Web-App",
+      "React-JS": "React-JS",
+      "UX/UI": "UX/UI",
+      "NextJs": "NextJs"
+    }
+  },
+  "footer": {
+    "contact": "Contact me!",
+    "placeholderName": "Your name",
+    "placeholderEmail": "Your email",
+    "placeholderMessage": "Your message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "thankYou": "Thank you for getting in touch"
+  }
+}

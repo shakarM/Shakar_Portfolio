@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./Home";
+import "./App.scss";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
-function App() {
+import { useTranslation } from "react-i18next";
+
+const App = () => {
+  const { t, i18n } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-center flex items-center">
+      <div className={i18n.language === "ku" ? "kurdish" : ""}>
+        <Home />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
