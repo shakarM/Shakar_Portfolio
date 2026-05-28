@@ -55,7 +55,7 @@ const Home = () => {
             className="flex items-center gap-6"
           >
             <Link to="/about" className="px-6 py-4 bg-pureBlack text-pureWhite font-medium hover:bg-accentOrange transition-colors flex items-center gap-2">
-              See My CV <ArrowRight className="w-4 h-4" />
+              My Cv <ArrowRight className="w-4 h-4" />
             </Link>
             <p className="text-sm text-gray-500 max-w-xs leading-relaxed">
               From research to execution, building experiences your customers actually deserve.
