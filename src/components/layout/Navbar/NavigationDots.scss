@@ -1,0 +1,36 @@
+.app__navigation {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 10;
+  direction: ltr; // Ensure consistent layout
+
+  &-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}
+
+// Dark mode overrides
+#dark {
+  .app__navigation-dot {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}

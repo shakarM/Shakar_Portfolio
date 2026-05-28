@@ -1,0 +1,74 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.no-works {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--gray-color);
+  margin: 5rem 0;
+  width: 100%;
+}
+
+.kurdish .project-grid {
+  direction: rtl;
+  
+  .card-header h3 {
+    text-align: right;
+  }
+
+  .card-description {
+    text-align: right;
+  }
+}
+
+.works-list-header {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+
+  .headText {
+    margin: 0;
+    line-height: 1.1;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    &.solid-text {
+      color: var(--black-color);
+    }
+
+    &.faded-text {
+      color: var(--black-color);
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 3rem;
+    .headText {
+      font-size: 2.25rem;
+      letter-spacing: -1px;
+    }
+  }
+}

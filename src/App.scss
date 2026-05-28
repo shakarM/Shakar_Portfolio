@@ -1,3 +1,6 @@
+// main.scss - Add these variables at the top
+@import "normalize.css";
+
 @font-face {
   font-family: "Estedad2";
   src: url("../../frontend-react/fonts/ttf/Estedad-Bold.ttf");
@@ -21,21 +24,27 @@
 .kurdish2 {
   font-family: "Estedad3";
 }
+
 .kurdish3 {
   font-family: "Estedad4";
 }
+
 .kurdish {
   font-family: "Estedad2";
 }
+
 .kurdish5 {
   font-family: "Estedad5";
 }
+
 .kurdish6 {
   font-family: "Estedad6";
 }
+
 body {
   background-color: var(--primary-color);
 }
+
 .app {
   font-family: var(--font-base);
   overflow-y: hidden;
@@ -110,11 +119,32 @@ body {
   }
 }
 
+#dark .head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: #333;
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
 .p-text {
   font-size: 0.8rem;
   text-align: left;
   color: var(--gray-color);
   line-height: 1.5;
+  font-weight: 100;
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
@@ -133,107 +163,5 @@ body {
 
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
-  }
-}
-
-.app__social {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  z-index: 1;
-  padding: 1rem;
-  top: 70%;
-
-  div {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    margin: 0.25rem 0;
-    border: 1px solid var(--lightGray-color);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    svg {
-      width: 15px;
-      height: 15px;
-      color: var(--gray-color);
-    }
-
-    &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-
-      svg {
-        color: var(--white-color);
-      }
-    }
-
-    @media screen and (min-width: 2000px) {
-      width: 70px;
-      height: 70px;
-
-      margin: 0.5rem 0;
-
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-}
-#light .app__social {
-  div {
-    background-color: var(--dark-color);
-    border: none;
-
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      background-color: var(--secondary-color);
-    }
-  }
-}
-
-.app__navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  padding: 1rem;
-
-  .app__navigation-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #cbcbcb;
-    margin: 0.5rem;
-
-    transition: background-color 0.2s ease-in-out;
-
-    &:hover {
-      background-color: var(--secondary-color);
-    }
-
-    @media screen and (min-width: 2000px) {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .app__navigation {
-    display: none;
-  }
-
-  .copyright {
-    padding: 2rem;
   }
 }

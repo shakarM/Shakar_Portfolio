@@ -1,7 +1,11 @@
 import React from "react";
-import ReactDom from "react-dom";
-import "./i18n";
+import ReactDOM from "react-dom/client";
+import "./config/i18n";
 import App from "./App";
 import "./index.css";
+import "./styles/theme.css";
 
-ReactDom.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <App />
+);

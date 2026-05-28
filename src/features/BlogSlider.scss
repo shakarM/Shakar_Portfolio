@@ -1,0 +1,59 @@
+.blog-slider-section {
+  overflow: hidden;
+
+  .blog-slider-container {
+    cursor: grab;
+    overflow: hidden;
+  }
+
+  .blog-slider {
+    display: flex;
+    gap: 1.5rem;
+    user-select: none;
+    padding-bottom: 1rem;
+  }
+
+  .blog-card {
+    min-width: 260px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    @apply dark:bg-neutral-800;
+
+    .image-wrapper {
+      height: 180px;
+      overflow: hidden;
+
+      img {
+        @apply w-full h-full object-cover transition-transform duration-300 ease-in-out;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+
+    .blog-details {
+      @apply p-4;
+
+      h3 {
+        @apply text-neutral-800 dark:text-white mb-3;
+      }
+
+      .publisher {
+        @apply flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-300;
+
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

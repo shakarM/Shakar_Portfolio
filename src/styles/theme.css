@@ -1,0 +1,35 @@
+/* Design Tokens */
+:root {
+    /* Brand Colors based on provided image */
+    --brand-navy: #0b1120;
+    /* Dark Navy Blue */
+    --brand-white: #ffffff;
+    --brand-orange: #ff6a00;
+    /* Vibrant Orange */
+
+    /* Light Theme Variables */
+    --bg-primary: var(--brand-white);
+    --bg-secondary: #f3f4f6;
+    --text-primary: var(--brand-navy);
+    --text-secondary: #4b5563;
+    --accent-color: var(--brand-orange);
+    --border-color: #e5e7eb;
+}
+
+/* Dark Theme Variables */
+[id="dark"],
+.theme-dark {
+    --bg-primary: var(--brand-navy);
+    --bg-secondary: #111827;
+    --text-primary: var(--brand-white);
+    --text-secondary: #9ca3af;
+    --accent-color: var(--brand-orange);
+    --border-color: #1f2937;
+}
+
+/* Global Transition Standards */
+:root {
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    --transition-slow: 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}

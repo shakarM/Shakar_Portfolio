@@ -1,0 +1,207 @@
+// ─────────────────────────────────────────────
+// Experience Section
+// ─────────────────────────────────────────────
+
+.experience-showcase {
+  width: 100%;
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  // ─── Header ──────────────────────────────────
+  .experience-header {
+    margin-bottom: 2rem;
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-base);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 0.6rem;
+    }
+
+    .headText {
+      font-family: var(--font-base);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--black-color);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 0;
+    }
+  }
+
+  // ─── Logo Grid: Compact and Modern ──────────
+  .experience-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .experience-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 120px;
+
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      cursor: crosshair;
+
+      &:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.15);
+      }
+    }
+
+    .brand-logo-placeholder-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      filter: grayscale(100%);
+      transition: all 0.4s ease;
+
+      .placeholder-logo-svg {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.5rem;
+      }
+
+      .placeholder-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        filter: grayscale(0%);
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  // ─── Kurdish RTL ─────────────────────────────
+  &.kurdish {
+    .experience-header {
+      text-align: right;
+      direction: rtl;
+    }
+
+    .experience-footer {
+      direction: rtl;
+    }
+  }
+
+  // ─── Footer ──────────────────────────────────
+  .experience-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    .pdf-showcase-button {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: var(--white-color);
+      border: 1px solid var(--border-color, #e5e7eb);
+      border-radius: 50px;
+      color: var(--black-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+      .pdf-icon {
+        font-size: 1.25rem;
+        color: var(--accent-color);
+        transition: color 0.3s ease;
+      }
+
+      &:hover {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #fff !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+        .pdf-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1.25rem;
+    margin: 4rem auto;
+  }
+}
+
+// ─── Experience Card removed (using logos instead) ───
+
+// ─────────────────────────────────────────────
+// Dark Mode
+// ─────────────────────────────────────────────
+
+#dark {
+  .experience-showcase {
+    .experience-header .headText {
+      color: var(--white-color);
+    }
+  }
+
+  .exp-card {
+    .experience-logo-item {
+      .brand-logo-placeholder {
+        color: var(--gray-color);
+      }
+    }
+  }
+
+  .experience-footer {
+    .pdf-showcase-button {
+      background: #1a1a1a;
+      border-color: #333;
+      color: var(--white-color);
+
+      &:hover {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #fff !important;
+      }
+    }
+  }
+}

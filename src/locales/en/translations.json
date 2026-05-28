@@ -1,10 +1,7 @@
 {
   "navbar": {
-    "welcome": "Welcome",
-    "description": "This is your description",
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
     "skills": "Skills",
     "work": "Work",
     "contact": "Contact"
@@ -12,15 +9,29 @@
   "about": {
     "title": "Let's Learn More",
     "subtitle": "About Me",
-    "description": ""
+    "description": "Hello! I'm Shakar, a Software Engineering student at the American University of Iraq - Sulaimani and a Business Administration minor. I'm in my 6th semester. Since childhood, I've had a strong passion for programming and design, which led me to work in various design positions. My most recent experience was as an App and Website Designer at Zoo Company in Erbil. I have good expertise in front-end web development, but I've delved deeper into the design aspect. In design, I have my own special process that allows me to create designs quickly and get the client's approval. I'm accustomed to working in Agile methodology. Besides design and coding, I enjoy content creation and participate in various activities and courses, both in my field and in soft skills. I always strive to improve myself and be in environments that help me grow."
   },
   "header": {
-    "greeting": "Hello, I am Shakar. Welcome to my profile👋🏻.",
-    "webDeveloper": "Web developer",
-    "uiuxDesigner": "UI UX Designer"
+    "about": "[CX Design Manager at Metrik Studios®] in Baghdad. I combine data-driven strategy with human-centered design to build seamless customer experiences that drive loyalty and growth. I love [design, marketing, and writing content] ✨"
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills & Experience",
+    "subtitle": "My Expertise",
+    "noSkills": "No skills found in this category",
+    "categories": {
+      "all": "All",
+      "technical": "Technical",
+      "soft": "Soft",
+      "language": "Language",
+      "general": "General"
+    },
+    "subCategories": {
+      "programming": "Programming Skills",
+      "networking": "Networking",
+      "design": "Design",
+      "database": "Database Skills",
+      "other": "Other Skills"
+    }
   },
   "experiences": {
     "title": "Work Experiences"
@@ -29,13 +40,42 @@
     "title": "Certifications"
   },
   "works": {
-    "header": "Here you can see my projects👇🏻",
+    "header_solid": "I design for the 'Wow'",
+    "header_faded": "not just for the look, but for the experience they'll love.",
+    "list_title_solid": "Here are my",
+    "list_title_faded": "works and case studies",
+    "description": "Strategic thinker crafting clean, effective designs that seamlessly blend user delight with business success.",
     "filters": {
       "All": "All",
       "Web-App": "Web-App",
       "React-JS": "React-JS",
       "UX/UI": "UX/UI",
       "NextJs": "NextJs"
+    }
+  },
+  "principles": {
+    "title": "My Design Principles",
+    "items": {
+      "data": {
+        "title": "Data",
+        "description": "I can't call any of my designs workable if they are not following data. Primary or secondary data is what drives me first in designing the best experience."
+      },
+      "customer": {
+        "title": "Customer/Users first",
+        "description": "I listen to customers—those who interact with the business. I want to hear their pain points and work through them."
+      },
+      "testing": {
+        "title": "Testing",
+        "description": "If a prototype is not being tested, then I don't expect the design to generate revenue, be liked by people, or align with the vision."
+      },
+      "details": {
+        "title": "What people don't see",
+        "description": "Every detail matters to me. The things that are not seen by most are what I focus on most! Small details will lead a design to be the best one or not."
+      },
+      "agile": {
+        "title": "Agile",
+        "description": "I just love this methodology; it’s more of a subjective decision, LOL."
+      }
     }
   },
   "footer": {

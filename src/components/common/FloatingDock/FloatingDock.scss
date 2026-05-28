@@ -1,0 +1,113 @@
+.floating-dock-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+  pointer-events: none;
+  margin-top: -4rem; /* Offset for better positioning at the end */
+
+  .dock-wrapper {
+    pointer-events: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 320px;
+    height: 70px;
+    padding: 0 1rem;
+    border-radius: 20px;
+    overflow: visible; // Let tooltips show
+
+    .dock-glass-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    .dock-items {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+      z-index: 2;
+    }
+
+    .dock-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+
+      .dock-tooltip {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+        color: #fff;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      &:hover .dock-tooltip {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      svg {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+      }
+    }
+  }
+}
+
+// Ensure the main container is centered on mobile
+@media screen and (max-width: 640px) {
+  .floating-dock-container {
+    bottom: 1.5rem;
+    width: 90vw;
+
+    .dock-wrapper {
+      width: 100%;
+      height: 70px;
+
+      .dock-items {
+        gap: 1rem;
+        padding: 0 1rem;
+
+        .dock-item svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

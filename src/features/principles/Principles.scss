@@ -1,0 +1,120 @@
+.app__principles-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 0 8rem 0; /* Space nicely below the big header and above the portfolio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* For the subtle right gradient effect */
+  z-index: 2;
+
+  .principles-header {
+    margin-bottom: 1rem;
+    margin-top: -4rem;
+    h3 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -1px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .principles-grid {
+    display: grid;
+    /* Exactly 5 columns to match the new one-line layout requirement */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem 3rem;
+    align-items: flex-start;
+
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      /* One by one over each other */
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .principle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .principle-icon {
+      color: var(--accent-color);
+      margin-bottom: 1.25rem;
+      transition: transform var(--transition-smooth);
+
+      /* Adding a tiny radial glow to mimic the custom stars in the design */
+      position: relative;
+
+      &:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+    }
+
+    .principle-title {
+      font-size: 1.25rem; /* Reduced to fit 5 columns nicely */
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .principle-description {
+      font-size: 0.85rem; /* Reduced to fit 5 columns nicely */
+      line-height: 1.6;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+  }
+
+  &.kurdish {
+    .principles-header h3,
+    .principle-item {
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+
+/* Subtle Right Gradient Effect placed globally so Works background gets it too */
+.app__work-container {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 600px;
+    height: 800px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 79, 0, 0.15) 0%,
+      rgba(255, 79, 0, 0) 70%
+    );
+    transform: translateY(-50%) translateX(30%);
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(40px);
+  }
+
+  /* Make sure content is above the gradient glow */
+  .works-header-section,
+  .app__principles-container,
+  .app__work-porfolio {
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -1,35 +1,33 @@
-import React, { createContext, useState } from "react";
-import About from "./container/about/About";
-import Header from "./container/Header/Header";
-import Works from "./container/Works/Works";
-import Skills from "./container/Skill/Skills";
+import React from "react";
 
-import Footer from "./container/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import AdvancedSlider from "./container/Projects/Slider";
+import Header from "./features/hero/Header";
+import Works from "./features/portfolio/Works";
+import "react-tooltip/dist/react-tooltip.css";
+import { motion } from "framer-motion";
+import Experience from "./features/experience/Experience";
+import FloatingDock from "./components/common/FloatingDock/FloatingDock";
 
-export const ThemeContext = createContext(null);
+import Navbar from "./components/layout/Navbar/Navbar";
+
 const Home = () => {
-  const [theme, setTheme] = useState("light");
-
-  const changeTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
   return (
-    <ThemeContext.Provider value={{ theme, changeTheme }}>
-      <div className="app" id={theme}>
-        <Navbar />
-        <div className="overflow-x-hidden m-auto">
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+      className="app"
+    >
+      <Navbar />
+      <div className="overflow-x-hidden ">
+        <div className="">
           <Header />
-          <About />
 
-          <Skills />
           <Works />
-
-          <Footer />
+          <Experience />
         </div>
       </div>
-    </ThemeContext.Provider>
+      <FloatingDock />
+    </motion.div>
   );
 };
 
