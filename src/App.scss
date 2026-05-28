@@ -1,45 +1,6 @@
 // main.scss - Add these variables at the top
 @import "normalize.css";
 
-@font-face {
-  font-family: "Estedad2";
-  src: url("/fonts/ttf/Estedad-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Estedad";
-  src: url("/fonts/ttf/Estedad-Black.ttf");
-}
-
-@font-face {
-  font-family: "Estedad3";
-  src: url("/fonts/ttf/Estedad-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Estedad4";
-  src: url("/fonts/ttf/Estedad-Regular.ttf");
-}
-
-.kurdish2 {
-  font-family: "Estedad3";
-}
-
-.kurdish3 {
-  font-family: "Estedad4";
-}
-
-.kurdish {
-  font-family: "Estedad2";
-}
-
-.kurdish5 {
-  font-family: "Estedad5";
-}
-
-.kurdish6 {
-  font-family: "Estedad6";
-}
 
 body {
   background-color: var(--primary-color);

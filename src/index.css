@@ -5,44 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Estedad2";
-  src: url("/fonts/ttf/Estedad-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Estedad";
-  src: url("/fonts/ttf/Estedad-Black.ttf");
-}
-
-@font-face {
-  font-family: "Estedad3";
-  src: url("/fonts/ttf/Estedad-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Estedad4";
-  src: url("/fonts/ttf/Estedad-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Estedad5";
-  src: url("/fonts/ttf/Estedad-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Estedad6";
-  src: url("/fonts/ttf/Estedad-ExtraLight.ttf");
-}
-
 body {
   font-family: "Manrope", sans-serif;
   background-color: #f4f4f5;
   color: #171717;
-}
-
-body.kurdish-font {
-  font-family: "Estedad4", sans-serif;
 }
 
 :root {
