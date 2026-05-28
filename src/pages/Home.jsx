@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Eye, Map, Briefcase, Award, ArrowRight } from 'lucide-react';
+import { Eye, Map, Award, ArrowRight } from 'lucide-react';
 import profileImage from '../assets/profile.jpg';
 import aboutImage from '../assets/AboutMe.jpg';
 

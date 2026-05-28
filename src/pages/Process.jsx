@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, PieChart, Compass, PenTool, PackageCheck, Target, TrendingUp, Monitor } from 'lucide-react';
+import { Search, PieChart, PenTool, PackageCheck, Target, TrendingUp, Monitor } from 'lucide-react';
 
 const Process = () => {
   const contentProcess = [

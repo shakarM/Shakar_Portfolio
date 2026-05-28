@@ -29,7 +29,7 @@ const Contact = () => {
               <span className="text-gray-500">Social</span>
               <div className="space-x-4">
                 <a href="https://linkedin.com" className="hover:text-accentOrange transition-colors">LinkedIn</a>
-                <a href="#" className="hover:text-accentOrange transition-colors">Behance</a>
+                <a href="https://www.behance.net/shakarlatif" target="_blank" rel="noopener noreferrer" className="hover:text-accentOrange transition-colors">Behance</a>
               </div>
             </div>
           </div>
