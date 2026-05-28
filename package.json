@@ -18,6 +18,7 @@
     "lucide": "^0.487.0",
     "lucide-react": "^1.16.0",
     "maath": "^0.10.8",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.5.15",
     "postcss-loader": "^8.0.0",
     "react": "^18.2.0",
