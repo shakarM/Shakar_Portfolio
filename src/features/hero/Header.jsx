@@ -4,11 +4,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import shakarImg from "../../assets/Shakar.png";
 import { FaLinkedin, FaFilePdf, FaFolder, FaRegClock, FaPlay, FaStepForward, FaStepBackward } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { i18n } = useTranslation();
   const isKurdish = i18n.language === "ku";
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   const [time, setTime] = useState(new Date());
   useEffect(() => {
@@ -103,8 +105,15 @@ const Header = () => {
         </motion.div>
 
         {/* Resume */}
-        <motion.div drag dragConstraints={containerRef} className="floating-card yellow-card resume-card" initial={{x: 500, y: 50, rotate: 5}} animate={{x: 500, y: 50, rotate: 5}}>
-          <p className="small-label">CV</p>
+        <motion.div 
+          drag 
+          dragConstraints={containerRef} 
+          className="floating-card yellow-card resume-card cursor-pointer" 
+          initial={{x: 500, y: 50, rotate: 5}} 
+          animate={{x: 500, y: 50, rotate: 5}}
+          onClick={() => navigate('/about')}
+        >
+          <p className="small-label">My Cv</p>
           <div className="resume-info">
             <FaFilePdf />
             <div>
