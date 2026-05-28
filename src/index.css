@@ -7,32 +7,32 @@
 
 @font-face {
   font-family: "Estedad2";
-  src: url("../../frontend-react/fonts/ttf/Estedad-Bold.ttf");
+  src: url("/fonts/ttf/Estedad-Bold.ttf");
 }
 
 @font-face {
   font-family: "Estedad";
-  src: url("../../frontend-react/fonts/ttf/Estedad-Black.ttf");
+  src: url("/fonts/ttf/Estedad-Black.ttf");
 }
 
 @font-face {
   font-family: "Estedad3";
-  src: url("../../frontend-react/fonts/ttf/Estedad-Medium.ttf");
+  src: url("/fonts/ttf/Estedad-Medium.ttf");
 }
 
 @font-face {
   font-family: "Estedad4";
-  src: url("../../frontend-react/fonts/ttf/Estedad-Regular.ttf");
+  src: url("/fonts/ttf/Estedad-Regular.ttf");
 }
 
 @font-face {
   font-family: "Estedad5";
-  src: url("../../frontend-react/fonts/ttf/Estedad-Regular.ttf");
+  src: url("/fonts/ttf/Estedad-Regular.ttf");
 }
 
 @font-face {
   font-family: "Estedad6";
-  src: url("../../frontend-react/fonts/ttf/Estedad-ExtraLight.ttf");
+  src: url("/fonts/ttf/Estedad-ExtraLight.ttf");
 }
 
 body {
